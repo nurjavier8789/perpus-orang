@@ -9,7 +9,7 @@ public class Run {
         Peminjaman z = new Peminjaman();
         Databuku buku = new Databuku();
 //        z.Siswa();
-        z.Listbuku(buku);
+        z.Listbuku(buku); //ini tak kasih 2 biar bisa bandingin sebelum ama sesudah meminjam/mengembalikan
         z.peminjaman(buku);
         z.Listbuku(buku);
 
