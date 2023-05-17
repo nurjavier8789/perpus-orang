@@ -1,46 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package PERPUSTAKAAN;
 
-/**
- *
- * @author mimbu
- */
-public class Buku {
-    private int idBuku;
-    private int stok;
-    private String judulBuku;
+/*
+    tak bikin class absract soalnya biar ada yang bisa di extends
+    pit tujuannya tetep sama kok, ngeOverride
+*/
 
-    public Buku(int idBuku, String judulBuku, int stok) {
-        this.idBuku = idBuku;
-        this.stok = stok;
-        this.judulBuku = judulBuku;
-    }
+public abstract class Buku {
 
     //implementasi enkapsulasi dengan pembuatan method utk mengakses data private "idBuku"
-    public int getIdBuku() {
-        return idBuku;
-    }
+    public abstract int getIdBuku(int a);
 
     //implementasi enkapsulasi dengan pembuatan method utk mengakses data private "stok"
-    public int getStok() {
-        return stok;
-    }
+    public abstract int getStok(int a);
 
     //implementasi enkapsulasi dengan pembuatan method utk mengakses data private "judulBuku" 
-    public String getJudulBuku() {
-        return judulBuku;
-    }
-    
+    public abstract String getJudulBuku(int a);
+
     // method untuk mengurangi stok sejumlah 1
-    public void kurangiStok(){
-        this.stok--;
-    }
-    public void tambahStock(){
-        this.stok++;
-    }
-    
+    public abstract void kurangiStok(int a, int b);
+
+    public abstract void tambahStock(int a, int b);
 }

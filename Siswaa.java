@@ -1,70 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package PERPUSTAKAAN;
 
-/**
+/*
+    Sengaja tak ganti interface biar gampang ngeoverridenya
+*/
 
- */
-public class Siswaa {
-    private int idSiswa;
-    private String nama;
-    private String kelas;
-    private String telepon;
-    boolean status;
-
-    public Siswaa(int idSiswa, String nama, String kelas, String telepon, boolean status) { //constructor
-        this.idSiswa = idSiswa;
-        this.nama = nama;
-        this.kelas = kelas;
-        this.telepon = telepon;
-        this.status = status;
-    }
-
-    Siswaa() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+public interface Siswaa {
 
     //enkapsulasi : pembuatan method untuk mengakses "idSiswa"
-    public int getIdSiswa() {
-        return idSiswa;
-    }
+    public int getIdSiswa(int a);
 
     //enkapsulasi : pembuatan method untuk mengakses "nama siswa"
-    public String getNama() {
-        return nama;
-    }
+    public String getNama(int a);
 
     //implementasi enkapsulasi dengan pembuatan method utk mengakses data private "alamat"
-    public String getKelas() {
-        return kelas;
-    }
+    public String getKelas(int a);
 
     //implementasi enkapsulasi dengan pembuatan method utk mengakses data private "telepon"
-    public String getTelepon() {
-        return telepon;
-    }
+    public String getTelepon(int a);
     
     //method untuk mengubah status peminjaman siswa
-    public void changeStatus(){
-        this.status = !this.status;
-    }
+    public void changeStatus(int a, boolean b);
 
     //method untuk mendapatkan status peminjaman
-    public String getStatus() {
-        if (status) {
-            return "Diijinkan meminjam";
-        }
-        else{
-            return "Tidak Diijinkan meminjam, \n harap melakukan pengembalian buku sebelum melakukan peminjaman lain";
-        }
-    }
-
-    //implementasi enkapsulasi dengan pembuatan method utk mengakses data private "isStatus"
-    public boolean isStatus() {
-        return status;
-    }
+    public boolean getStatus(int a);
     
 }
